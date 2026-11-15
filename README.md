@@ -4,14 +4,12 @@ The site for Lee Christie: speaking, insights, about and contact.
 It is a plain [Jekyll](https://jekyllrb.com) site, which GitHub Pages builds and hosts for free.
 There is nothing to install: edit a file on github.com, commit, and the live site updates in about a minute.
 
-## Putting it online (once)
+## Where it lives
 
-1. Create a new **public** repository on GitHub and push this folder to it.
-   Name it `YOUR-USERNAME.github.io` to get the address `https://YOUR-USERNAME.github.io`;
-   any other name gives `https://YOUR-USERNAME.github.io/REPO-NAME/`. Both work.
-2. In the repository: **Settings → Pages → Build and deployment → Deploy from a branch**, choose `main` and `/ (root)`, then Save.
-3. Wait a minute and open the address shown on that page.
+- Live site: https://leejchristie.github.io
+- This repository: https://github.com/leejchristie/leejchristie.github.io
 
+Every commit to the `main` branch is published automatically (see **Settings → Pages**).
 To use your own domain later, add it under **Settings → Pages → Custom domain**.
 
 ## Where things live
