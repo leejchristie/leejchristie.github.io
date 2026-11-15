@@ -1,0 +1,23 @@
+---
+layout: default
+title: Insights
+permalink: /insights/
+description: Short, honest notes on the human side of AI at work, for people leaders. One idea each.
+image: tone.webp
+---
+<section class="hero house-hero" style="background-image:url({{ '/assets/img/space1.webp' | relative_url }})">
+  <div class="wrap"><span class="lab">Insights</span><h1 class="display ink">The human side of <span class="blk">AI at work.</span></h1>
+  <p class="lead narrow ink">Short, honest notes for people leaders. One idea each.</p></div>
+</section>
+<section class="house">
+  <div class="wrap">
+    <div class="chips" role="group" aria-label="Filter by topic"><button class="chip on" type="button" data-topic="" aria-pressed="true">All</button>{% for t in site.topics %}<button class="chip" type="button" data-topic="{{ t }}" aria-pressed="false">{{ t }}</button>{% endfor %}</div>
+    {% assign feature = site.posts | where: 'featured', true | first %}
+    {% if feature %}
+    <article class="feature" data-topics="{{ feature.topics | join: '|' }}"><div class="fimg" style="background-image:url({{ '/assets/img/' | append: feature.image | relative_url }})"></div><div><span class="lab">Featured · {{ feature.topics | join: ' · ' }}</span><h2>{{ feature.title }}</h2><p class="lead-s">{{ feature.summary }}</p>{% if feature.coming_soon %}<span class="soon">Coming soon</span>{% else %}<a href="{{ feature.url | relative_url }}" class="btn dark sm">Read it</a>{% endif %}</div></article>
+    {% endif %}
+    <div class="grid3">{% for post in site.posts %}{% unless post.url == feature.url %}{% include post-card.html post=post %}{% endunless %}{% endfor %}</div>
+    <p class="none" hidden>Nothing under that topic yet.</p>
+  </div>
+</section>
+{% include newsletter.html heading='Get the next one <span class="blk">first.</span>' %}

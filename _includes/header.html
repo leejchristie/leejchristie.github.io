@@ -1,0 +1,14 @@
+<header class="hdr{% unless page.hero == 'dark' %} solid{% endunless %}" id="hdr"{% if page.hero == 'dark' %} data-dark{% endif %}>
+  <div class="wrap hdr-in">
+    <a href="{{ '/' | relative_url }}" class="name">{{ site.title }}<span class="spark"></span></a>
+    <nav aria-label="Main" id="nav">
+      <a href="{{ '/speaking/' | relative_url }}"{% if page.url contains '/speaking/' %} class="on" aria-current="page"{% endif %}>Speaking</a>
+      <a href="{{ '/insights/' | relative_url }}"{% if page.url contains '/insights/' %} class="on" aria-current="page"{% endif %}>Insights</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="on" aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} class="on" aria-current="page"{% endif %}>Contact</a>
+    </nav>
+    <a href="{{ site.linkedin }}" class="hdr-li" aria-label="LinkedIn" rel="me noopener">in</a>
+    <a href="{{ '/contact/' | relative_url }}" class="btn hdr-btn">Book a talk</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>

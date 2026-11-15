@@ -1,0 +1,16 @@
+# Public events. Add new ones here, earliest first.
+# Once the date has passed, the site stops showing an event as "upcoming"
+# by itself. Move it to past.yml when you get a moment.
+#
+# - title: Leading through transformation
+#   kind: Panel
+#   host: HR Leadership Forum
+#   place: The Alex, Dublin
+#   date: 2026-11-03        # year-month-day. Leave out if not confirmed yet.
+#   link: https://...       # optional: tickets / event page
+
+- title: Leading through transformation
+  kind: Panel
+  host: HR Leadership Forum
+  place: The Alex, Dublin
+  date: 2026-11-03

@@ -1,0 +1,24 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+description: Book Lee Christie for a keynote, panel, workshop or guest lecture.
+hero: dark
+---
+<section class="stage contact" style="background-image:url({{ '/assets/img/glow-stage-corner.webp' | relative_url }})">
+  <div class="wrap two"><div><span class="lab">Contact</span><h1 class="display">What would you try <span class="blk inv">on Monday?</span></h1>
+  <p class="lead">Tell me about the room, the date and what you'd like people to leave with. I'll reply within two working days.</p>
+  <div class="contact-list">
+    <span>{% include icons/mail.svg size=20 %} <a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+    <span>{% include icons/rings.svg size=20 %} <a href="{{ site.linkedin }}" rel="me noopener">{{ site.linkedin | remove: 'https://www.' }}</a></span>
+    <span>{% include icons/pin.svg size=20 %} {{ site.location }}</span>
+  </div></div>
+  <form class="form glass" data-form="contact" data-endpoint="{{ site.form_endpoint }}" data-email="{{ site.email }}" data-subject="Speaking enquiry"{% if site.form_endpoint != "" %} action="{{ site.form_endpoint }}" method="post"{% endif %}>
+    <div class="row2"><label>Name<input name="name" autocomplete="name" required></label><label>Organisation<input name="organisation" autocomplete="organization"></label></div>
+    <div class="row2"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Date (if known)<input name="date" type="text" placeholder="e.g. March 2027"></label></div>
+    <div class="row2"><label>Format<select name="format"><option>Keynote</option><option>Panel</option><option>Workshop</option><option>Masterclass</option><option>Guest lecture</option></select></label>
+    <label>Talk<select name="talk" id="talk"><option value="">Not sure yet</option>{% for t in site.data.talks %}<option value="{{ t.id }}">{{ t.title }}</option>{% endfor %}</select></label></div>
+    <label>Tell me about the audience<textarea name="audience" rows="4"></textarea></label>
+    <button class="btn light" type="submit">Send enquiry</button><span class="ok" role="status" hidden></span>
+  </form></div>
+</section>

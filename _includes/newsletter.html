@@ -1,0 +1,10 @@
+<section class="news" style="background-image:url({{ '/assets/img/space1.webp' | relative_url }})">
+  <div class="wrap news-grid">
+    <div><span class="lab">The newsletter</span><h2>{{ include.heading }}</h2>{% if include.text %}<p>{{ include.text }}</p>{% endif %}</div>
+    <form class="signup" data-form="newsletter" data-endpoint="{{ site.newsletter_endpoint }}" data-email="{{ site.email }}" data-subject="Subscribe me to {{ site.newsletter_name }}"{% if site.newsletter_endpoint != "" %} action="{{ site.newsletter_endpoint }}" method="post"{% endif %}>
+      <label class="sr" for="em">Email</label><input id="em" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+      <button class="btn dark" type="submit">Subscribe</button>
+      <span class="ok" role="status" hidden></span>
+    </form>
+  </div>
+</section>

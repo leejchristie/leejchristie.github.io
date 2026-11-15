@@ -1,0 +1,45 @@
+# The talks. Shown on the home page (cards) and the Speaking page (full rows).
+# icon: chip | cycle | shield | pulse      image: any file in assets/img
+- id: the-ai-will-see-you-now
+  title: The AI will see you now
+  kind: Keynote
+  length: 40 min
+  icon: chip
+  image: split.webp
+  summary: What leaders need to know before the tools arrive, and the conversations nobody has planned for.
+  audience: executives and HR leaders
+  leave_with: a plain-English map of AI in people work
+  format: in person or online
+
+- id: change-is-easy
+  title: Change is easy. People aren't.
+  kind: Panel · workshop
+  length: 60–90 min
+  icon: cycle
+  image: sweep.webp
+  summary: Why programmes stall in the quiet months after launch, and the boring fixes that work.
+  audience: people managers and change teams
+  leave_with: three rituals to protect adoption
+  format: in person or online
+
+- id: ethics-but-practical
+  title: Ethics, but practical
+  kind: Workshop
+  length: 90 min
+  icon: shield
+  image: house.webp
+  summary: Guardrails for AI in people decisions that a manager can actually follow on a Tuesday.
+  audience: HR, data and legal teams
+  leave_with: a one-page set of guardrails
+  format: in person or online
+
+- id: say-feel-do
+  title: Say · Feel · Do
+  kind: Masterclass
+  length: Half day
+  icon: pulse
+  image: beams.webp
+  summary: A diagnostic for the gap between what leaders announce and what people experience.
+  audience: leadership teams
+  leave_with: a Say · Feel · Do read-out for your team
+  format: in person or online

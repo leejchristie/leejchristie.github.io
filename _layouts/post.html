@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="hero house-hero post-hero" style="background-image:url({{ '/assets/img/space1.webp' | relative_url }})">
+  <div class="wrap">
+    <span class="lab">{{ page.topics | join: ' · ' }}</span>
+    <h1 class="display ink">{{ page.title }}</h1>
+    {% if page.summary %}<p class="lead narrow ink">{{ page.summary }}</p>{% endif %}
+    {% unless page.coming_soon %}<span class="meta">{{ page.date | date: '%-d %B %Y' }} · {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>{% endunless %}
+  </div>
+</section>
+<section class="house">
+  <div class="wrap">
+    <article class="prose">
+      {% if page.coming_soon %}
+      <p>This one is still being written. Subscribe below and it will land in your inbox when it's ready.</p>
+      {% else %}
+      {{ content }}
+      {% endif %}
+    </article>
+    <a class="arrow back" href="{{ '/insights/' | relative_url }}">← All insights</a>
+  </div>
+</section>
+{% include newsletter.html heading='Get the next one <span class="blk">first.</span>' %}

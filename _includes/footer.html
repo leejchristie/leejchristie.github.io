@@ -1,0 +1,9 @@
+<footer class="ftr">
+  <div class="wrap ftr-grid">
+    <div>{% include icons/logo.svg %}<p>{{ site.tagline }}</p></div>
+    <div><span class="lab">Site</span><a href="{{ '/speaking/' | relative_url }}">Speaking</a><a href="{{ '/insights/' | relative_url }}">Insights</a><a href="{{ '/about/' | relative_url }}">About</a><a href="{{ '/contact/' | relative_url }}">Contact</a></div>
+    <div><span class="lab">Elsewhere</span><a href="{{ site.linkedin }}" rel="me noopener">LinkedIn</a><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+    <div><span class="lab">Newsletter</span><p>{{ site.newsletter_name }}, monthly. One idea, one chart, one thing to try.</p></div>
+  </div>
+  <div class="wrap small-print"><span>© {{ site.time | date: '%Y' }} {{ site.title }}</span><span>{{ site.location }}</span></div>
+</footer>

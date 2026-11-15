@@ -1,0 +1,45 @@
+---
+layout: default
+title: Speaking
+permalink: /speaking/
+description: Four talks on AI, ethics and change. Keynotes, panels and workshops for executives, HR leaders, universities and professional bodies.
+image: split.webp
+hero: dark
+---
+<section class="hero stage short" style="background-image:url({{ '/assets/img/split.webp' | relative_url }})">
+  <div class="wrap"><span class="lab">Speaking</span><h1 class="display">Four talks. One honest <span class="blk inv">conversation.</span></h1>
+  <p class="lead narrow">Keynotes, panels and workshops for executives, HR leaders, universities and professional bodies.</p></div>
+</section>
+
+{% for t in site.data.talks %}
+<section class="house talk-row{% cycle '', ' rev' %}" id="{{ t.id }}">
+  <div class="wrap two">
+    <div class="talk-img" style="background-image:url({{ '/assets/img/' | append: t.image | relative_url }})"></div>
+    <div><span class="lab">{{ t.kind }} · {{ t.length }}</span><h2>{{ t.title }}</h2><p class="lead-s">{{ t.summary }}</p>
+      <ul class="dash"><li>For: {{ t.audience }}</li><li>Leave with: {{ t.leave_with }}</li><li>Format: {{ t.format }}</li></ul>
+      <a href="{{ '/contact/' | relative_url }}?talk={{ t.id }}" class="btn dark sm">Enquire about this talk</a></div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="house sunk">
+  <div class="wrap"><div class="sec-head"><div><span class="lab">Upcoming</span><h2>Where to <span class="blk">catch it live.</span></h2></div></div>
+  <div class="events">
+    {% for ev in site.data.events %}
+    <div class="ev"{% if ev.date %} data-date="{{ ev.date | date: '%Y-%m-%d' }}"{% endif %}><span class="date">{% if ev.date %}<b>{{ ev.date | date: '%d' }}</b>{{ ev.date | date: '%b %Y' }}{% else %}<b>—</b>TBC{% endif %}</span><div><strong>{{ ev.title }}</strong><span>{{ ev.kind }} · {{ ev.host }} · {{ ev.place }}</span></div>{% if ev.link %}<a class="arrow" href="{{ ev.link }}" rel="noopener">Details →</a>{% endif %}</div>
+    {% endfor %}
+    <div class="ev-empty"{% if site.data.events.size > 0 %} hidden{% endif %}><div><strong>No public dates announced right now.</strong><br><span>Want one in your diary? Tell me about your event.</span></div><a class="btn dark sm" style="margin-top:0" href="{{ '/contact/' | relative_url }}">Book a talk</a></div>
+  </div></div>
+</section>
+
+<section class="house">
+  <div class="wrap"><div class="sec-head"><div><span class="lab">Past engagements</span><h2>Rooms I've <span class="blk">spoken in.</span></h2></div></div>
+  <div class="past">{% for e in site.data.past %}<figure><div class="pimg2" style="background-image:url({{ '/assets/img/' | append: e.image | relative_url }})"></div><figcaption><b>{{ e.name }}</b>{{ e.detail }}</figcaption></figure>{% endfor %}</div></div>
+</section>
+
+<section class="house">
+  <div class="wrap two"><div><span class="lab">Practical bits</span><h2>Before you <span class="blk">book.</span></h2><p>Fees, travel and recordings, answered up front.</p></div>
+  <div class="faq">{% for f in site.data.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</div></div>
+</section>
+
+{% include kit.html %}

@@ -1,0 +1,5 @@
+<section class="house kit-sec">
+  <div class="wrap"><div class="kit">{% include icons/doc.svg size=40 %}<div><span class="lab">Speaker kit · PDF</span><h3>Bio, headshots, talk outlines and AV needs, in one file.</h3></div>
+  {% if site.speaker_kit != "" %}<a href="{{ site.speaker_kit | relative_url }}" class="btn light" download>Download speaker kit</a>
+  {% else %}<a href="mailto:{{ site.email }}?subject=Speaker%20kit%20request" class="btn light">Request the speaker kit</a>{% endif %}</div></div>
+</section>

@@ -1,0 +1,14 @@
+# Past engagements, shown as a photo grid on the Speaking page.
+# Swap each image for a real stage photo when you have one (put it in assets/img).
+- name: Ibec HR Leadership Summit
+  detail: Keynote · Dublin
+  image: speaker.webp
+- name: Ibec Senior HR Directors Forum
+  detail: Panel · Dublin
+  image: beams.webp
+- name: Talent Summit 2025
+  detail: Talk · Dublin
+  image: horizon.webp
+- name: HR Leadership Forum
+  detail: Panel · The Alex, Dublin · Nov 2026
+  image: split.webp

@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------
+# Site settings. Edit these, commit, and GitHub rebuilds the site.
+# ---------------------------------------------------------------
+title: Lee Christie
+tagline: See what is. Shape what's next.
+description: >-
+  Keynotes, panels and workshops on AI, ethics and transformation,
+  from someone who runs HR for 800 people and builds the tools he talks about.
+lang: en-IE
+
+email: lee.james.christie@gmail.com
+linkedin: https://www.linkedin.com/in/leejchristie
+location: Wicklow and Dublin · online anywhere
+newsletter_name: House Lights
+
+# Optional extras. Leave empty ("") until you have them.
+portrait: ""          # e.g. /assets/img/portrait.png (transparent cut-out works best)
+speaker_kit: ""       # e.g. /assets/files/lee-christie-speaker-kit.pdf
+form_endpoint: ""        # e.g. https://formspree.io/f/abcdwxyz (contact form posts here)
+newsletter_endpoint: ""  # same idea for the newsletter sign-up
+# While an endpoint is empty, that form opens a ready-written email instead.
+
+# Categories shown as filter buttons on the Insights page
+topics: [AI, Change, Ethics, Culture, Leadership, From the stage]
+
+# --- you shouldn't need to change anything below ---
+permalink: /insights/:title/
+markdown: kramdown
+exclude: [README.md, Gemfile, Gemfile.lock, vendor, "*.zip"]
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }

@@ -1,0 +1,86 @@
+---
+layout: default
+permalink: /
+seo_title: Lee Christie · Speaker on AI, ethics and change
+hero: dark
+---
+<section class="hero stage" style="background-image:url({{ '/assets/img/curtain.webp' | relative_url }})">
+  <div class="wrap hero-grid{% if site.portrait == "" %} solo{% endif %}">
+    <div class="hero-copy">
+      <span class="lab">Keynotes · panels · workshops</span>
+      <h1 class="display">People, culture and change, <span class="blk inv">done honestly.</span></h1>
+      <p class="lead">Smart talk on AI, ethics and transformation from someone who runs HR for 800 people and builds the tools he talks about.</p>
+      <div class="btns"><a href="{{ '/contact/' | relative_url }}" class="btn light">Book a talk</a><a href="{{ '/speaking/' | relative_url }}" class="btn ghost-light">See the talks</a></div>
+      {% for ev in site.data.events %}{% if ev.date %}
+      <div class="glass next" data-date="{{ ev.date | date: '%Y-%m-%d' }}" hidden><span class="lab">Next on stage</span><strong>{{ ev.title }}</strong><span>{{ ev.kind }} · {{ ev.host }} · {{ ev.place }} · {{ ev.date | date: '%-d %b %Y' }}</span></div>
+      {% endif %}{% endfor %}
+    </div>
+    {% include portrait.html %}
+  </div>
+</section>
+
+<section class="house band-tight">
+  <div class="wrap stages"><span class="lab">As heard at</span>{% for s in site.data.stages %}<span>{{ s }}</span>{% endfor %}</div>
+</section>
+
+<section class="house">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="lab">The talks</span><h2>Four talks. <span class="blk">Zero buzzword bingo.</span></h2></div><a href="{{ '/speaking/' | relative_url }}" class="arrow">All talks and formats →</a></div>
+    <div class="grid4">
+      {% for t in site.data.talks %}
+      <article class="tcard">
+        <div class="tcard-top">{% include icons/{{ t.icon }}.svg size=28 %}<span class="lab">{{ t.kind }}</span></div>
+        <h3>{{ t.title }}</h3><p>{{ t.summary }}</p>
+        <div class="tcard-foot"><span class="lab">{{ t.length }}</span><a href="{{ '/speaking/' | relative_url }}#{{ t.id }}" class="arrow" aria-label="Details: {{ t.title | escape }}">Details →</a></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include kit.html %}
+
+<section class="house glow-house" style="background-image:url({{ '/assets/img/glow-house.webp' | relative_url }})">
+  <div class="wrap">
+    <span class="lab">The short version</span><h2>Buyer, builder and the one <span class="blk">explaining it.</span></h2>
+    <div class="glass-row">
+      <div class="glass light"><span class="lab">People led</span><span class="num">800</span></div>
+      <div class="glass light"><span class="lab">Talks on the set list</span><span class="num">04</span></div>
+      <div class="glass light"><span class="lab">Stages and panels</span><span class="num">05</span></div>
+      <div class="glass light"><span class="lab">Years in workforce analytics</span><span class="num">10+</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="house">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="lab">Say · Feel · Do</span><h2>Culture is what happens <span class="blk">after the speech.</span></h2></div></div>
+    <div class="sfd">
+      <div class="step"><span class="lab">01</span>{% include icons/say.svg size=30 %}<h3>Say</h3><p>What leaders announce, promise and put on slides.</p></div>
+      <div class="step"><span class="lab">02</span>{% include icons/feel.svg size=30 %}<h3>Feel</h3><p>What people experience on the ground, week to week.</p></div>
+      <div class="step aura-v"><span class="lab">03</span>{% include icons/do.svg size=30 %}<h3><b>Do</b></h3><p>What actually changes: behaviour, decisions, habits.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stage statement" style="background-image:url({{ '/assets/img/glow-stage-corner.webp' | relative_url }})">
+  <div class="wrap"><span class="lab">From the talk</span><p class="display">AI won't fix <span class="blk inv">your culture.</span></p>
+  <p class="lead narrow">The tools are ready. The managers aren't. Most of the work of AI at work is the human bit, and that's where the talk starts.</p></div>
+</section>
+
+<section class="house">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="lab">Insights</span><h2>Notes on people, AI and <span class="blk">change.</span></h2></div><a href="{{ '/insights/' | relative_url }}" class="arrow">All insights →</a></div>
+    <div class="grid3">{% for post in site.posts limit: 3 %}{% include post-card.html post=post %}{% endfor %}</div>
+  </div>
+</section>
+
+{% if site.data.testimonials.size > 0 %}{% assign q = site.data.testimonials | first %}
+<section class="quote-band" style="background-image:url({{ '/assets/img/space2.webp' | relative_url }})">
+  <div class="wrap"><span class="lab">What organisers say</span>
+  <blockquote class="display">“{{ q.quote }}”</blockquote>
+  <span class="lab">{{ q.name }} · {{ q.role }}</span></div>
+</section>
+{% endif %}
+
+{% include newsletter.html heading='House Lights, <span class="blk">monthly.</span>' text='One idea, one chart, one thing to try. No buzzwords.' %}
